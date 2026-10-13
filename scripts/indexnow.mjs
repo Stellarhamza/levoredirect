@@ -4,16 +4,19 @@ import path from 'node:path';
 const root = process.cwd();
 const dist = path.join(root, 'dist');
 const key = process.env.INDEXNOW_KEY?.trim();
-const host = process.env.INDEXNOW_HOST?.trim() || 'dotacheats.com';
+const host = process.env.INDEXNOW_HOST?.trim() || 'fortnite-cheats.com';
 
 if (!key) {
   console.log('IndexNow: skipped (INDEXNOW_KEY not set).');
   process.exit(0);
 }
 
-const sitemapPath = path.join(dist, 'sitemap.xml');
-if (!fs.existsSync(sitemapPath)) {
-  console.warn('IndexNow: dist/sitemap.xml missing — skipping ping.');
+const sitemapPath = [
+  path.join(dist, 'sitemap-all.xml'),
+  path.join(dist, 'sitemap-0.xml'),
+].find((p) => fs.existsSync(p));
+if (!sitemapPath) {
+  console.warn('IndexNow: dist/sitemap-all.xml missing — skipping ping.');
   process.exit(0);
 }
 

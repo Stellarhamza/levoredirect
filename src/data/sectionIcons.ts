@@ -2,13 +2,13 @@ import type { IconName } from '../components/icons/types';
 
 export const featureIcons: Record<string, IconName> = {
   Scripts: 'stepCrosshair',
-  'Map Hack / ESP': 'featureEsp',
-  'Minimap & Runes': 'featureRadar',
-  'Auto Combo': 'featureAimbot',
+  'ESP Wallhack / ESP': 'featureEsp',
+  'Radar & Loot': 'featureRadar',
+  'Aimbot': 'featureAimbot',
   'Utility Suite': 'featureUtilitySuite',
-  'Auto Farm Bot': 'compareAutoFarm',
+  'Loot Assist': 'compareAutoFarm',
   'Stream Proof': 'streamProof',
-  'Zoom Hack': 'compareZoomHack',
+  'Radar Hack': 'compareZoomHack',
   'Cloud Config & Updates': 'compareCloudBackup',
 };
 
@@ -53,7 +53,7 @@ export const heroStatusPills: { icon: IconName; label: string }[] = [
   { icon: 'lootEsp', label: 'Loot ESP' },
   { icon: 'skeletonEsp', label: 'Skeleton ESP' },
   { icon: 'uavRadar', label: 'UAV Radar' },
-  { icon: 'mapHack', label: 'Map Hack' },
+  { icon: 'mapHack', label: 'ESP Wallhack' },
   { icon: 'support247', label: '24/7 Support' },
   { icon: 'instantDelivery', label: 'Instant Delivery' },
   { icon: 'rankedSafe', label: 'Ranked Safe' },
@@ -98,7 +98,7 @@ export const productAcquisitionStepIcons: IconName[] = [
 /** Product detail requirement tiles — prefer compat-style icons where mapped */
 export const productRequirementIcons: Partial<Record<IconName, IconName>> = {
   reqWindows: 'compatWindows',
-  reqSteam: 'compatSteam',
+  reqEpic: 'compatEpic',
   reqSettings: 'compatPackage',
   reqWifi: 'compatWifi',
   reqCpu: 'compatMonitor',
@@ -116,7 +116,7 @@ export function requirementDisplayIcon(icon: IconName): IconName {
 export const compatibilityIcons: IconName[] = [
   'compatWindows',
   'compatPackage',
-  'compatSteam',
+  'compatEpic',
   'compatMonitor',
   'compatRefresh',
   'compatWifi',

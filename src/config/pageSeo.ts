@@ -10,59 +10,59 @@ export interface PageSeoEntry {
 
 export const PAGE_SEO: Record<string, PageSeoEntry> = {
   '/': {
-    // gscNote: Keep primary keyword "dota 2 cheats" near front; trim if title truncates in SERP.
-    title: 'Dota 2 Cheats & Hacks | Scripts, Map Hack & ESP',
+    title: 'Fortnite Cheats | Aimbot, ESP & Wallhack',
     description:
-      'Dota 2 cheats for PC ranked: scripts, map hack, zoom hack, and skin changer tiers updated every patch at dotacheats.com.',
+      'Fortnite cheats for PC with aimbot, ESP, wallhack, radar, loot ESP and skin changer. Updated after Easy Anti-Cheat patches.',
   },
-  '/products/dota-2-cheats/': {
-    title: 'Dota 2 Elite Cheats & Utility Products',
+  '/products/fortnite-cheats/': {
+    title: 'Fortnite Cheats Products | Elite, HWID & Skin Changer',
     description:
-      'Elite dota 2 cheats plus HWID spoofer, UGC tools, and Skin Changer utilities for Steam ranked on dotacheats.com.',
+      'Fortnite Elite cheats, HWID spoofer, UGC recovery and Skin Changer for Battle Royale, Zero Build and Ranked on PC.',
   },
-  '/products/dota-2-cheats/elite/': {
-    title: 'Dota 2 Elite Cheats | Bots & Full Map Hack',
+  '/products/fortnite-cheats/elite/': {
+    title: 'Fortnite Elite Cheats | Aimbot, ESP & Loot Assist',
     description:
-      'Elite tier: auto farm bot, kill steal, skin changer, full map hack suite, and priority patch delivery.',
+      'Fortnite Elite with aimbot, ESP wallhack, loot assist, Auto Finish, Skin Changer and priority patch updates.',
   },
-  '/products/dota-2-cheats/utilities/': {
-    title: 'Dota 2 Utilities | HWID, UGC & Skin Changer',
+  '/products/fortnite-cheats/utilities/': {
+    title: 'Fortnite Utilities | HWID Spoofer, UGC & Skin Changer',
     description:
-      'Choose HWID Spoofer, UGC, or Skin Changer—when each utility fits and links to full product pages.',
+      'HWID Spoofer after hardware bans, UGC for Epic and EAC appeals, and local Skin Changer / Unlock All.',
   },
   '/blog/': {
-    title: 'Dota 2 Cheats Guides & Patch Notes',
+    title: 'Fortnite Cheats Guides | Aimbot, ESP & EAC',
     description:
-      'Setup guides, Lite vs Pro comparisons, VAC patch checklists, and ranked config tips for dota cheats.',
+      'Guides on Fortnite aimbot, ESP wallhack, Lite vs Pro, Creative practice and Easy Anti-Cheat patch checks.',
   },
   '/forum/': {
-    title: 'Dota 2 Community Forum | DotaCheats',
-    description: 'Join Dota players to discuss heroes, builds, patch changes, guides, and community moments.',
+    title: 'Fortnite Cheats Forum',
+    description:
+      'Talk Fortnite cheat setup, aimbot and ESP configs, EAC status and product questions.',
   },
   '/faq/': {
-    title: 'FAQ | Dota 2 Cheats, Products & Setup',
+    title: 'FAQ | Fortnite Aimbot, ESP & Setup',
     description:
-      'Answers on cheat tiers, map hack, scripts, HWID tools, checkout, and blog guides at dotacheats.com.',
+      'Answers on Fortnite cheat tiers, aimbot, ESP wallhack, radar, HWID spoofer, Skin Changer and loader setup.',
   },
   '/terms/': {
-    title: 'Terms & Conditions | DotaCheats',
+    title: 'Terms & Conditions | Fortnite Cheats',
     description:
-      'Purchase terms, license use, and refund policy for DotaCheats products sold through dotacheats.com.',
+      'Purchase terms, license use and refund policy for Fortnite cheat products on fortnite-cheats.com.',
   },
   '/privacy/': {
-    title: 'Privacy Policy | DotaCheats',
+    title: 'Privacy Policy | Fortnite Cheats',
     description:
-      'How dotacheats.com uses analytics, cookies, and contact data when you browse or request support.',
+      'How fortnite-cheats.com uses analytics, cookies and contact data.',
   },
   '/about/': {
-    title: 'About DotaCheats',
+    title: 'About Fortnite Cheats',
     description:
-      'What DotaCheats publishes: Dota 2 cheat tiers, utilities, guides, and status notes at dotacheats.com.',
+      'Fortnite Cheats sells PC Fortnite cheat tiers, guides and utilities at fortnite-cheats.com.',
   },
   '/support/': {
-    title: 'Support | DotaCheats',
+    title: 'Support | Fortnite Cheats',
     description:
-      'Get help with loader setup, HWID, and checkout for Dota 2 cheat tiers and utilities.',
+      'Help with Fortnite cheat loader setup, configs, HWID spoofing and checkout.',
   },
 };
 

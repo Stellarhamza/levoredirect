@@ -1,34 +1,35 @@
 /** Blog index topic filters + Starwind sort select. */
-export function initBlogIndexFilters(emptyMessage: string) {
-  const grid = document.getElementById('blog-grid');
-  const emptyEl = document.getElementById('blog-empty');
-  const sortRoot = document.getElementById('blog-sort-select');
+
+function initBlogIndexFilters(root: HTMLElement) {
+  if (root.dataset.blogFiltersBound === 'true') return;
+  root.dataset.blogFiltersBound = 'true';
+
+  const grid = root.querySelector<HTMLElement>('#blog-grid');
+  const emptyEl = root.querySelector<HTMLElement>('#blog-empty');
+  const sortRoot = root.querySelector<HTMLElement>('#blog-sort-select');
   if (!grid) return;
 
-  const filters = document.querySelectorAll<HTMLButtonElement>('[data-blog-filter]');
+  const emptyMessage =
+    root.getAttribute('data-empty-message') ?? 'No articles match this filter.';
 
-  const cards = () => [...grid.querySelectorAll<HTMLElement>('[data-blog-card]')];
+  const filters = [
+    ...root.querySelectorAll<HTMLButtonElement>('[data-blog-filter]'),
+  ];
+  if (!filters.length) return;
+
+  const featuredWrap = root.querySelector<HTMLElement>('[data-blog-featured]');
+  const featuredCard = featuredWrap?.querySelector<HTMLElement>('[data-blog-card]');
+  const sortSelect = sortRoot?.querySelector<HTMLElement>('[data-sw-select]');
+  const sortInput = sortRoot?.querySelector<HTMLInputElement>('[data-sw-select-input]');
+
+  let currentSort = sortInput?.value || sortSelect?.getAttribute('data-value') || 'newest';
+
+  const gridCards = () => [...grid.querySelectorAll<HTMLElement>('[data-blog-card]')];
 
   const activeTag = () =>
-    document.querySelector<HTMLButtonElement>('[data-blog-filter][aria-pressed="true"]')?.getAttribute(
+    filters.find((btn) => btn.getAttribute('aria-pressed') === 'true')?.getAttribute(
       'data-blog-filter',
     ) ?? 'all';
-
-  const getSortSelectRoot = () => sortRoot?.querySelector<HTMLElement>('[data-sw-select]');
-
-  const getSort = () => {
-    const root = getSortSelectRoot();
-    const fromAttr = root?.getAttribute('data-value');
-    if (fromAttr) return fromAttr;
-    const input = sortRoot?.querySelector<HTMLInputElement>('[data-sw-select-input]');
-    return input?.value || 'newest';
-  };
-
-  const isBlogSortEvent = (event: Event) => {
-    const root = getSortSelectRoot();
-    if (!root || !sortRoot) return false;
-    return event.target === root || root.contains(event.target as Node);
-  };
 
   const compareCards = (a: HTMLElement, b: HTMLElement, sort: string) => {
     const tsA = Number(a.getAttribute('data-ts') ?? 0);
@@ -41,23 +42,39 @@ export function initBlogIndexFilters(emptyMessage: string) {
     return tsB - tsA;
   };
 
-  const apply = () => {
+  const setVisible = (el: HTMLElement, match: boolean) => {
+    el.classList.toggle('hidden', !match);
+    // HTML hidden beats utility `flex` on the card.
+    el.toggleAttribute('hidden', !match);
+  };
+
+  const apply = (sortOverride?: string) => {
     const tag = activeTag();
-    const sort = getSort();
-    const items = cards();
+    const sort = sortOverride ?? currentSort;
+    currentSort = sort;
+    const items = gridCards();
 
     const sorted = [...items].sort((a, b) => compareCards(a, b, sort));
     sorted.forEach((el) => grid.appendChild(el));
 
     let visibleCount = 0;
+
+    if (featuredWrap && featuredCard) {
+      const featuredMatch =
+        tag === 'all' || featuredCard.getAttribute('data-tag') === tag;
+      setVisible(featuredWrap, featuredMatch);
+      if (featuredMatch) visibleCount += 1;
+    }
+
     items.forEach((el) => {
       const match = tag === 'all' || el.getAttribute('data-tag') === tag;
-      el.classList.toggle('hidden', !match);
+      setVisible(el, match);
       if (match) visibleCount += 1;
     });
 
     if (emptyEl) {
       emptyEl.classList.toggle('hidden', visibleCount > 0);
+      emptyEl.toggleAttribute('hidden', visibleCount > 0);
       emptyEl.textContent = emptyMessage;
     }
   };
@@ -70,14 +87,42 @@ export function initBlogIndexFilters(emptyMessage: string) {
     });
   });
 
+  // Starwind emits starwind:value-change BEFORE it writes the new value to the DOM.
+  // Read the next value from event.detail, not from the still-stale input/attribute.
   const onSortChange = (event: Event) => {
-    if (!isBlogSortEvent(event)) return;
-    apply();
+    if (!(event instanceof CustomEvent)) return;
+    const target = event.target;
+    if (!(target instanceof Element)) return;
+    if (!sortSelect || (target !== sortSelect && !sortSelect.contains(target))) return;
+
+    const detail = event.detail as { value?: unknown } | null;
+    const next =
+      typeof detail?.value === 'string' && detail.value
+        ? detail.value
+        : sortInput?.value || currentSort;
+
+    apply(next);
   };
 
   document.addEventListener('starwind:value-change', onSortChange);
 
-  // Starwind select hydrates after first paint — re-apply once ready.
-  requestAnimationFrame(apply);
-  window.setTimeout(apply, 0);
+  // Fallback if the select only updates the hidden input.
+  sortInput?.addEventListener('change', () => {
+    apply(sortInput.value || 'newest');
+  });
+
+  requestAnimationFrame(() => apply());
+  window.setTimeout(() => apply(), 0);
+}
+
+export function setupBlogIndexFilters() {
+  const run = () => {
+    document.querySelectorAll<HTMLElement>('[data-blog-index]').forEach((root) => {
+      if (!document.contains(root)) return;
+      initBlogIndexFilters(root);
+    });
+  };
+
+  run();
+  document.addEventListener('astro:page-load', run);
 }

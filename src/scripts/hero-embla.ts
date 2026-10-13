@@ -1,5 +1,4 @@
 export const HERO_AUTOPLAY_MS = 4800;
-const DESKTOP_MQ = '(min-width: 1024px)';
 
 type EmblaApi = {
   selectedScrollSnap: () => number;
@@ -10,6 +9,7 @@ type EmblaApi = {
 type AutoplayPlugin = {
   stop: () => void;
   play: () => void;
+  reset?: () => void;
 };
 
 function restartProgress(progressEl: HTMLElement) {
@@ -47,7 +47,6 @@ function bindHeroDots(wrapper: HTMLElement, api: EmblaApi, autoplay: AutoplayPlu
       const active = i === index;
       dot.dataset.active = active ? 'true' : 'false';
       dot.setAttribute('aria-selected', active ? 'true' : 'false');
-      dot.tabIndex = active ? 0 : -1;
     });
     syncProgress();
   };
@@ -56,7 +55,8 @@ function bindHeroDots(wrapper: HTMLElement, api: EmblaApi, autoplay: AutoplayPlu
     const index = Number(dot.getAttribute('data-hero-embla-dot'));
     dot.addEventListener('click', () => {
       api.scrollTo(index);
-      autoplay.stop();
+      autoplay.reset?.();
+      autoplay.play();
     });
   });
 
@@ -66,12 +66,12 @@ function bindHeroDots(wrapper: HTMLElement, api: EmblaApi, autoplay: AutoplayPlu
 }
 
 async function initHeroCarousels(root: ParentNode = document) {
-  if (!window.matchMedia(DESKTOP_MQ).matches) return;
-
   const nodes = [...root.querySelectorAll<HTMLElement>('[data-hero-embla]')].filter(
     (node) => node.dataset.heroEmblaReady !== 'true',
   );
   if (!nodes.length) return;
+
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   const [{ createCarousel }, { default: Autoplay }] = await Promise.all([
     import('@starwind-ui/runtime/carousel'),
@@ -79,15 +79,18 @@ async function initHeroCarousels(root: ParentNode = document) {
   ]);
 
   nodes.forEach((carouselRoot) => {
-    carouselRoot.dataset.heroEmblaReady = 'true';
-
     const wrapper = carouselRoot.closest('[data-hero-embla-wrap]');
     if (!wrapper) return;
 
+    carouselRoot.dataset.heroEmblaReady = 'true';
+
     const autoplay = Autoplay({
       delay: HERO_AUTOPLAY_MS,
-      stopOnInteraction: true,
+      playOnInit: !reducedMotion,
+      // Keep looping after drag/dot/focus — homepage scroller should not die on first click.
+      stopOnInteraction: false,
       stopOnMouseEnter: true,
+      stopOnFocusIn: false,
     });
 
     const instance = createCarousel(carouselRoot, {
@@ -97,11 +100,26 @@ async function initHeroCarousels(root: ParentNode = document) {
 
     bindHeroDots(wrapper as HTMLElement, instance.api as EmblaApi, autoplay);
 
+    if (reducedMotion) {
+      autoplay.stop();
+      return;
+    }
+
+    const resumeIfVisible = () => {
+      if (document.hidden) return;
+      const rect = carouselRoot.getBoundingClientRect();
+      const inView = rect.bottom > 0 && rect.top < window.innerHeight;
+      if (inView) autoplay.play();
+    };
+
     const pauseWhenHidden = () => {
       if (document.hidden) autoplay.stop();
-      else autoplay.play();
+      else resumeIfVisible();
     };
     document.addEventListener('visibilitychange', pauseWhenHidden);
+
+    // Resume after hover pause (plugin stops on enter; we restart on leave).
+    wrapper.addEventListener('mouseleave', resumeIfVisible);
 
     const io = new IntersectionObserver(
       ([entry]) => {
@@ -109,9 +127,11 @@ async function initHeroCarousels(root: ParentNode = document) {
         if (entry.isIntersecting && !document.hidden) autoplay.play();
         else autoplay.stop();
       },
-      { threshold: 0.35 },
+      { threshold: 0, rootMargin: '80px 0px' },
     );
     io.observe(carouselRoot);
+
+    requestAnimationFrame(resumeIfVisible);
   });
 }
 
@@ -121,10 +141,5 @@ export function setupHeroEmbla() {
   };
 
   run();
-
-  window.matchMedia(DESKTOP_MQ).addEventListener('change', (event) => {
-    if (event.matches) run();
-  });
-
   document.addEventListener('astro:page-load', run);
 }

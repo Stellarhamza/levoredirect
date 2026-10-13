@@ -22,8 +22,8 @@ async function optimizeDir(relativeDir) {
     for (const width of widths) {
       const output = path.join(dir, `${base}-${width}.webp`);
       await sharp(input)
-        .resize({ width, withoutEnlargement: true })
-        .webp({ quality: 82, effort: 4 })
+        .resize({ width, withoutEnlargement: true, kernel: sharp.kernel.lanczos3 })
+        .webp({ quality: 90, effort: 5, smartSubsample: true })
         .toFile(output);
       console.log(`Wrote ${path.relative(root, output)}`);
     }
