@@ -1,17 +1,43 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import { resolveDistDir } from './dist-dir.mjs';
 
 const SITE = 'https://fortnite-cheats.com';
-const root = process.cwd();
-const dist = path.join(root, 'dist');
-const source = path.join(dist, 'sitemap-0.xml');
+const dist = resolveDistDir();
 
-if (!fs.existsSync(source)) {
-  console.error('finalize-sitemap: dist/sitemap-0.xml not found — run astro build first.');
-  process.exit(1);
+function loadUrlsetXml(dir) {
+  const zero = path.join(dir, 'sitemap-0.xml');
+  if (fs.existsSync(zero)) return fs.readFileSync(zero, 'utf8');
+
+  const single = path.join(dir, 'sitemap.xml');
+  if (fs.existsSync(single)) {
+    const xml = fs.readFileSync(single, 'utf8');
+    if (xml.includes('<urlset')) return xml;
+  }
+
+  const indexPath = path.join(dir, 'sitemap-index.xml');
+  if (fs.existsSync(indexPath)) {
+    const indexXml = fs.readFileSync(indexPath, 'utf8');
+    for (const match of indexXml.matchAll(/<loc>([^<]+)<\/loc>/g)) {
+      const file = path.basename(new URL(match[1]).pathname);
+      const child = path.join(dir, file);
+      if (fs.existsSync(child)) {
+        const childXml = fs.readFileSync(child, 'utf8');
+        if (childXml.includes('<urlset')) return childXml;
+      }
+    }
+  }
+
+  return null;
 }
 
-const raw = fs.readFileSync(source, 'utf8');
+const raw = loadUrlsetXml(dist);
+if (!raw) {
+  console.error(
+    `finalize-sitemap: no urlset sitemap in ${dist} — run astro build first.`,
+  );
+  process.exit(1);
+}
 
 /** @typedef {{ loc: string, lastmod?: string, changefreq?: string, priority?: string }} SitemapUrl */
 

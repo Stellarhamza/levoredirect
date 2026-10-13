@@ -1,8 +1,8 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import { resolveDistDir } from './dist-dir.mjs';
 
-const root = process.cwd();
-const dist = path.join(root, 'dist');
+const dist = resolveDistDir();
 const key = process.env.INDEXNOW_KEY?.trim();
 const host = process.env.INDEXNOW_HOST?.trim() || 'fortnite-cheats.com';
 
@@ -16,7 +16,7 @@ const sitemapPath = [
   path.join(dist, 'sitemap-0.xml'),
 ].find((p) => fs.existsSync(p));
 if (!sitemapPath) {
-  console.warn('IndexNow: dist/sitemap-all.xml missing — skipping ping.');
+  console.warn('IndexNow: sitemap-all.xml missing — skipping ping.');
   process.exit(0);
 }
 
