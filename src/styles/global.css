@@ -52,7 +52,7 @@
   max-width: 40rem;
   font-size: 0.875rem;
   line-height: 1.6;
-  color: rgb(115 115 115);
+  color: #27272a;
 }
 
 html.dark .section-header__subtitle {
@@ -128,6 +128,26 @@ html::-webkit-scrollbar,
     linear-gradient(90deg, rgba(6, 8, 12, 0.45) 0%, rgba(6, 8, 12, 0.12) 52%, rgba(6, 8, 12, 0.4) 100%);
 }
 
+/* Light mode: wash hero to a pale surface so near-black copy stays readable */
+html:not(.dark) #hero .hero-bg-image {
+  filter: brightness(1.2) saturate(0.4) contrast(0.95);
+  opacity: 0.38;
+}
+
+html:not(.dark) #hero .hero-bg-dim {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.78) 0%, rgba(255, 255, 255, 0.62) 42%, rgba(255, 255, 255, 0.96) 100%),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.4) 52%, rgba(255, 255, 255, 0.65) 100%);
+}
+
+html:not(.dark) body {
+  color: #0a0a0a;
+}
+
+html:not(.dark) .text-muted-foreground {
+  color: #27272a;
+}
+
 @media (min-width: 768px) {
   #hero {
     padding-top: calc(var(--floating-nav-clearance) + 4rem);
@@ -153,7 +173,7 @@ html.fonts-pending body {
 }
 
 html:not(.dark) .icon-app {
-  color: var(--muted-foreground);
+  color: #18181b;
 }
 
 html:not(.dark) .icon-app.icon-app--primary {
