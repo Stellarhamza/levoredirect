@@ -52,6 +52,13 @@ export function pageTitle(keyword: string, brand = t.site.name): string {
   return `${trimmed}${suffix}`;
 }
 
+/** Keep meta descriptions blunt about Fortnite cheats for SERP snippets. */
+export function cheatMetaDescription(text: string): string {
+  const trimmed = text.trim();
+  if (/fortnite\s*cheat/i.test(trimmed)) return trimmed;
+  return `Fortnite cheats guide: ${trimmed}`;
+}
+
 export const DEFAULT_OG_IMAGE_WIDTH = 1200;
 export const DEFAULT_OG_IMAGE_HEIGHT = 630;
 

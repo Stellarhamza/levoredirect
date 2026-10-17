@@ -291,8 +291,8 @@ export function getAllFaqs(): SiteFaqItem[] {
 /** Shared FAQ block copy + filters (home, /faq/, products, blog). */
 export const SITE_FAQ_SECTION_COPY = {
   eyebrow: 'All topics',
-  title: 'Browse by category',
-  subtitle: 'Filter cheat plans, ESP wallhack, aimbot, products, setup and blog answers.',
+  title: 'Fortnite cheats FAQ',
+  subtitle: 'Filter by cheat plans, ESP wallhack, aimbot, products, setup and guides.',
 } as const;
 
 export const SITE_FAQ_FILTER_TOPICS: FaqTopic[] = [
@@ -308,9 +308,9 @@ export const SITE_FAQ_FILTER_TOPICS: FaqTopic[] = [
 
 /** Section copy when FAQ list is scoped to the current page (not /faq/). */
 export const CONTEXTUAL_FAQ_SECTION_COPY = {
-  eyebrow: 'FAQ',
-  title: 'Questions about this page',
-  subtitle: 'Answers tied to what you are reading—visit the FAQ page for every topic.',
+  eyebrow: 'Cheat FAQ',
+  title: 'Fortnite cheats questions',
+  subtitle: 'Straight answers on aimbot, ESP, bans and setup — see the full FAQ for every topic.',
 } as const;
 
 export function faqFilterTopicsForItems(items: SiteFaqItem[]): FaqTopic[] {

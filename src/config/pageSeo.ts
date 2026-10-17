@@ -10,59 +10,74 @@ export interface PageSeoEntry {
 
 export const PAGE_SEO: Record<string, PageSeoEntry> = {
   '/': {
-    title: 'Fortnite Cheats | Aimbot, ESP & Wallhack',
+    title: 'Buy Undetected Fortnite Cheats | Aimbot, ESP & Wallhack',
     description:
-      'Fortnite cheats for PC with aimbot, ESP, wallhack, radar, loot ESP and skin changer. Updated after Easy Anti-Cheat patches.',
+      'Buy undetected Fortnite cheats for PC — aimbot, ESP, wallhack, radar, loot ESP and skin changer. Updated after every Easy Anti-Cheat patch.',
   },
   '/products/fortnite-cheats/': {
-    title: 'Fortnite Cheats Products | Elite, HWID & Skin Changer',
+    title: 'Buy Fortnite Cheats | Elite, HWID Spoofer & Skin Changer',
     description:
-      'Fortnite Elite cheats, HWID spoofer, UGC recovery and Skin Changer for Battle Royale, Zero Build and Ranked on PC.',
+      'Shop Fortnite cheats for PC: Elite aimbot & ESP wallhack, HWID spoofer, UGC recovery and Skin Changer. Instant delivery after checkout.',
   },
   '/products/fortnite-cheats/elite/': {
-    title: 'Fortnite Elite Cheats | Aimbot, ESP & Loot Assist',
+    title: 'Buy Fortnite Elite Cheats | Aimbot, ESP & Loot Assist',
     description:
-      'Fortnite Elite with aimbot, ESP wallhack, loot assist, Auto Finish, Skin Changer and priority patch updates.',
+      'Buy Fortnite Elite cheats with aimbot, ESP wallhack, loot assist, Auto Finish, Skin Changer and priority EAC patch updates.',
+  },
+  '/products/fortnite-cheats/hwid-spoofer/': {
+    title: 'Buy Fortnite HWID Spoofer | Hardware Ban Bypass',
+    description:
+      'Buy a Fortnite HWID spoofer for PC hardware bans — disk/MAC tools, compatibility scan and post-spoof checks before you launch cheats again.',
+  },
+  '/products/fortnite-cheats/ugc/': {
+    title: 'Buy Fortnite UGC | EAC & Epic Ban Appeal Tools',
+    description:
+      'Buy Fortnite UGC (Unban & Governance Control) to organize Epic and EAC ban appeals, dispute workflows and case tracking.',
+  },
+  '/products/fortnite-cheats/unlock-all/': {
+    title: 'Buy Fortnite Skin Changer | Unlock All Cosmetics',
+    description:
+      'Buy Fortnite Skin Changer / Unlock All — local outfit, wrap and pickaxe previews with your Fortnite cheats loadout.',
   },
   '/products/fortnite-cheats/utilities/': {
-    title: 'Fortnite Utilities | HWID Spoofer, UGC & Skin Changer',
+    title: 'Buy Fortnite Cheat Utilities | HWID, UGC & Skin Changer',
     description:
-      'HWID Spoofer after hardware bans, UGC for Epic and EAC appeals, and local Skin Changer / Unlock All.',
+      'Buy Fortnite cheat utilities: HWID spoofer after hardware bans, UGC for Epic/EAC appeals, and local Skin Changer / Unlock All.',
   },
   '/blog/': {
-    title: 'Fortnite Cheats Guides | Aimbot, ESP & EAC',
+    title: 'Fortnite Cheat Guides | Aimbot, ESP Wallhack & EAC',
     description:
-      'Guides on Fortnite aimbot, ESP wallhack, Lite vs Pro, Creative practice and Easy Anti-Cheat patch checks.',
+      'Read Fortnite cheat guides on aimbot setup, ESP wallhack, Lite vs Pro, Creative practice and Easy Anti-Cheat patch-day checks.',
   },
   '/forum/': {
-    title: 'Fortnite Cheats Forum',
+    title: 'Fortnite Cheats Forum | Aimbot, ESP & Setup Help',
     description:
-      'Talk Fortnite cheat setup, aimbot and ESP configs, EAC status and product questions.',
+      'Fortnite cheats forum for aimbot configs, ESP wallhack setup, EAC status and product questions before you buy.',
   },
   '/faq/': {
-    title: 'FAQ | Fortnite Aimbot, ESP & Setup',
+    title: 'Fortnite Cheats FAQ | Aimbot, ESP, Bans & Setup',
     description:
-      'Answers on Fortnite cheat tiers, aimbot, ESP wallhack, radar, HWID spoofer, Skin Changer and loader setup.',
+      'Fortnite cheats FAQ — tiers, aimbot, ESP wallhack, radar, HWID spoofer, Skin Changer, bans and loader setup before checkout.',
   },
   '/terms/': {
-    title: 'Terms & Conditions | Fortnite Cheats',
+    title: 'Terms for Fortnite Cheats | License & Refunds',
     description:
-      'Purchase terms, license use and refund policy for Fortnite cheat products on fortnite-cheats.com.',
+      'Terms for buying Fortnite cheats on fortnite-cheats.com — license use, delivery, refunds and account risk.',
   },
   '/privacy/': {
-    title: 'Privacy Policy | Fortnite Cheats',
+    title: 'Privacy Policy | Fortnite Cheats Shop',
     description:
-      'How fortnite-cheats.com uses analytics, cookies and contact data.',
+      'How the Fortnite cheats shop at fortnite-cheats.com uses analytics, cookies and contact data.',
   },
   '/about/': {
-    title: 'About Fortnite Cheats',
+    title: 'About Fortnite Cheats | Buy PC Aimbot & ESP',
     description:
-      'Fortnite Cheats sells PC Fortnite cheat tiers, guides and utilities at fortnite-cheats.com.',
+      'About Fortnite Cheats — we sell PC Fortnite cheats (aimbot, ESP, wallhack), guides and utilities at fortnite-cheats.com.',
   },
   '/support/': {
-    title: 'Support | Fortnite Cheats',
+    title: 'Fortnite Cheats Support | Loader, HWID & Checkout',
     description:
-      'Help with Fortnite cheat loader setup, configs, HWID spoofing and checkout.',
+      'Fortnite cheats support for loader setup, aimbot/ESP configs, HWID spoofing and checkout help — 24/7 Discord.',
   },
 };
 

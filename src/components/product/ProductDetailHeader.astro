@@ -14,7 +14,7 @@ const { product } = Astro.props;
   <div class="flex flex-wrap items-center gap-2">
     <Badge variant="secondary">{product.badge}</Badge>
     {product.variant === 'popular' && <Badge>Popular</Badge>}
-    {product.variant === 'limited' && <Badge variant="warning">Limited</Badge>}
+    {product.variant === 'limited' && <Badge variant="primary">Limited</Badge>}
     <Badge variant="outline">Fortnite</Badge>
     <Badge variant="outline" class="gap-1.5">
       <Icon name="shieldCheck" size={13} class="icon-app--primary" />

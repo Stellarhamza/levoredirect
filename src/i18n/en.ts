@@ -8,9 +8,9 @@ export const en: Translations = {
   site: {
     name: 'Fortnite Cheats',
     domain: 'fortnite-cheats.com',
-    title: 'Fortnite Cheats — Aimbot, ESP & Wallhack Overlay for PC',
+    title: 'Buy Undetected Fortnite Cheats | Aimbot, ESP & Wallhack',
     description:
-      'Fortnite cheats for PC with aimbot, ESP, wallhack, radar, loot ESP and skin changer. Updated after Easy Anti-Cheat patches.',
+      'Buy undetected Fortnite cheats for PC: aimbot, ESP, wallhack, radar, loot ESP and skin changer. Updated after Easy Anti-Cheat patches.',
     discord: DISCORD_URL,
   },
   nav: [
@@ -23,11 +23,11 @@ export const en: Translations = {
   hero: {
     status: 'Fortnite online',
     eyebrow: 'Undetected Fortnite cheats',
-    titleLine1: 'Fortnite Cheats —',
-    titleLine2: 'Aimbot, ESP & Wallhack Overlay for PC',
+    titleLine1: 'Undetected Fortnite Cheats',
+    titleLine2: 'Aimbot, ESP & Wallhack',
     subtitle:
-      'Aimbot, ESP, wallhack, radar and loot ESP for Battle Royale, Zero Build and Ranked on Windows PC. Updated after Fortnite and Easy Anti-Cheat patches.',
-    ctaPrimary: 'View products',
+      'Buy Fortnite cheats for PC — aimbot, ESP, wallhack, radar and loot ESP for Battle Royale, Zero Build and Ranked. Updated after every EAC patch.',
+    ctaPrimary: 'Buy cheats',
     ctaDiscord: 'Join Discord',
     modesLabel: 'Modes',
     modes: ['Battle Royale', 'Zero Build', 'Ranked', 'Creative'],
@@ -39,9 +39,9 @@ export const en: Translations = {
     ],
   },
   features: {
-    eyebrow: 'Features',
-    title: 'What you get',
-    subtitle: 'Aimbot, ESP, wallhack, radar and loot ESP for Fortnite on PC. Updated every EAC patch.',
+    eyebrow: 'Cheat features',
+    title: 'Fortnite cheat modules',
+    subtitle: 'Aimbot, ESP, wallhack, radar and loot ESP — every module you need to dominate Fortnite on PC.',
     items: [
       {
         title: 'Aimbot',
@@ -142,10 +142,10 @@ export const en: Translations = {
     ],
   },
   whyUs: {
-    eyebrow: 'Why us',
-    title: 'Updated after EAC patches',
+    eyebrow: 'Why our cheats',
+    title: 'Fortnite cheats that stay online',
     subtitle:
-      'A lot of Fortnite cheat sites go down after patches and leave you with bots in chat. We push loader updates, keep aimbot smoothness sane by default, and answer on Discord.',
+      'Most cheat shops go down after EAC patches and leave you with bots. We ship loader updates fast, keep aimbot defaults safe for Ranked, and answer on Discord 24/7.',
     usLabel: 'Fortnite Cheats',
     otherLabel: 'Typical shop',
     rows: [
@@ -194,11 +194,11 @@ export const en: Translations = {
   },
   setup: {
     eyebrow: 'Setup',
-    titleLead: 'Checkout to in-game in',
+    titleLead: 'Buy cheats. Play in',
     titleHighlight: 'three steps',
     intro:
-      'Buy access, download the loader from the portal, load a preset, then open Fortnite. Discord help is there if you get stuck.',
-    ctaPrimary: 'View products',
+      'Buy your Fortnite cheat, download the loader, load a preset, then open Fortnite. Discord help is there if you get stuck.',
+    ctaPrimary: 'Buy cheats',
     ctaSecondary: 'Setup FAQ',
     ctaPrimaryHref: productBase,
     ctaSecondaryHref: '/faq/',
@@ -227,9 +227,9 @@ export const en: Translations = {
     items: ['Windows 10 & 11', 'Epic Games Launcher', 'Fortnite client', 'Auto updater', 'Config cloud sync', 'Discord support', 'HWID reset', 'External loader'],
   },
   cheats: {
-    eyebrow: 'Elite',
-    title: 'Fortnite Elite',
-    subtitle: 'Aimbot, ESP wallhack, loot assist, Skin Changer, and faster patch priority.',
+    eyebrow: 'Elite cheat',
+    title: 'Fortnite Elite cheats',
+    subtitle: 'Full Fortnite cheat suite — aimbot, ESP wallhack, loot assist, Skin Changer, and faster patch priority.',
     viewAll: 'View Elite details',
     explore: 'Explore',
     items: [
@@ -237,8 +237,8 @@ export const en: Translations = {
         badge: 'Limited slots',
         tier: 'Private',
         name: 'Elite',
-        title: 'Fortnite Elite',
-        desc: 'Elite Fortnite cheat with loot assist, Auto Finish, Auto Shield Break, full ESP wallhack, Skin Changer and direct Discord support.',
+        title: 'Fortnite Elite Cheats',
+        desc: 'Buy Fortnite Elite cheats with loot assist, Auto Finish, Auto Shield Break, full ESP wallhack, Skin Changer and direct Discord support.',
         features: ['Loot Assist', 'Auto Finish', 'Auto Shield Break', 'Full ESP wallhack', 'Skin Changer', 'Priority patch queue'],
         more: 42,
         href: `${productBase}elite/`,
@@ -247,19 +247,19 @@ export const en: Translations = {
     ],
   },
   products: {
-    eyebrow: 'Products',
-    title: 'Fortnite products',
-    subtitle: 'Elite Fortnite cheats, HWID spoofer, UGC recovery and Skin Changer.',
-    viewAll: 'View all products',
-    get: 'Get',
+    eyebrow: 'Shop',
+    title: 'Buy Fortnite cheats',
+    subtitle: 'Elite Fortnite cheats, HWID spoofer, UGC recovery and Skin Changer — pick what you need.',
+    viewAll: 'View all cheats',
+    get: 'Buy',
     explore: 'Explore',
     items: [
       {
         badge: 'Available',
         category: 'System utility',
-        title: 'HWID Spoofer',
+        title: 'Fortnite HWID Spoofer',
         subtitle: 'Clean slate for your PC',
-        desc: 'Hardware ID spoofing for disk serials, MAC addresses and GPU IDs—follow the portal setup guide before launching Fortnite.',
+        desc: 'Buy a Fortnite HWID spoofer for disk serials, MAC addresses and GPU IDs—run the portal guide before launching cheats again.',
         features: ['Spoofer & cleanup tools', 'Serial profile rotation', 'Compatibility scan', 'Post-spoof verification'],
         more: 9,
         href: `${productBase}hwid-spoofer/`,
@@ -267,9 +267,9 @@ export const en: Translations = {
       {
         badge: 'Available',
         category: 'Account recovery',
-        title: 'UGC',
+        title: 'Fortnite UGC Unban Tools',
         subtitle: 'Unban & governance control',
-        desc: 'All-in-one appeal workspace for Epic account restrictions, EAC bans and security holds—custom workflows and dispute automation.',
+        desc: 'Buy Fortnite UGC tools for Epic account restrictions, EAC bans and security holds—custom appeal workflows and dispute automation.',
         features: ['Custom appeal workflows', 'Dispute automation', 'Case documentation', 'Status tracking dashboard'],
         more: 6,
         href: `${productBase}ugc/`,
@@ -277,9 +277,9 @@ export const en: Translations = {
       {
         badge: 'Available',
         category: 'Cosmetic',
-        title: 'Skin Changer',
+        title: 'Fortnite Skin Changer',
         subtitle: 'Unlock every cosmetic locally',
-        desc: 'Lightweight Skin Changer for player outfits, weapon skins and rare variants—local preview without Epic Games store purchases.',
+        desc: 'Buy Fortnite Skin Changer / Unlock All for outfits, wraps and pickaxes—local preview without Epic store purchases.',
         features: ['Outfit skin swap', 'Wrap & pickaxe customizer', 'Exclusive set preview', 'Loadout favorites export'],
         more: 7,
         href: `${productBase}unlock-all/`,
@@ -287,11 +287,11 @@ export const en: Translations = {
     ],
   },
   blog: {
-    eyebrow: 'Blog',
-    title: 'Guides and updates',
-    subtitle: 'Aimbot setup, ESP wallhack config, Creative practice tips and EAC patch-day checks for Fortnite.',
-    latestTitle: 'Latest articles',
-    latestSubtitle: 'Filter by topic or sort to find setup guides, feature deep-dives, and patch-day notes.',
+    eyebrow: 'Cheat guides',
+    title: 'Fortnite cheat guides',
+    subtitle: 'Aimbot setup, ESP wallhack config, Creative practice tips and EAC patch-day checks.',
+    latestTitle: 'Latest cheat guides',
+    latestSubtitle: 'Filter by topic or sort to find aimbot, ESP, wallhack and patch-day cheat guides.',
     filterAll: 'All articles',
     sortLabel: 'Sort by',
     sortNewest: 'Newest first',
@@ -304,7 +304,7 @@ export const en: Translations = {
     items: [
       {
         tag: 'Guides',
-        title: 'Fortnite Creative practice guide: aim drills before ranked',
+        title: 'Fortnite Cheats Creative Practice: Aim Drills Before Ranked',
         slug: 'fortnite-cheat-codes-guide',
         image: '/images/blog/fortnite-cheat-codes-guide.png',
         desc: 'Use Creative and bot lobbies to practice aimbot smoothness, ESP ranges and loadouts before Ranked.',
@@ -313,7 +313,7 @@ export const en: Translations = {
       },
       {
         tag: 'Guides',
-        title: 'Fortnite Creative tips for aimbot and ESP practice',
+        title: 'Fortnite Cheats Creative Tips for Aimbot and ESP',
         slug: 'fortnite-console-cheats-tips',
         image: '/images/blog/fortnite-console-cheats-tips.png',
         desc: 'Creative and bot-lobby workflows to tune aimbot, ESP wallhack and loot ESP before Ranked.',
@@ -367,7 +367,7 @@ export const en: Translations = {
       },
       {
         tag: 'Setup',
-        title: 'Fortnite aimbot for ranked play',
+        title: 'Buy Fortnite Aimbot Cheats for Ranked',
         slug: 'fortnite-aimbot-ranked-guide',
         image: '/images/blog/fortnite-aimbot-ranked-guide.png',
         desc: 'Aimbot, Prediction and Hotkey macros configs for climbing ranked with Pro tier fortnite cheats.',
@@ -376,7 +376,7 @@ export const en: Translations = {
       },
       {
         tag: 'Setup',
-        title: 'ESP wallhack setup for Fortnite ranked',
+        title: 'Fortnite ESP Wallhack Cheat Setup for Ranked',
         slug: 'fortnite-esp-wallhack-setup',
         image: '/images/blog/fortnite-esp-wallhack-setup.png',
         desc: 'Enemy position tracking, chest ESP, smoke alerts and vision detector tuning for Lite and Elite tiers.',
@@ -385,7 +385,7 @@ export const en: Translations = {
       },
       {
         tag: 'Setup',
-        title: 'Radar hack guide for Fortnite',
+        title: 'Fortnite Radar Hack Cheat Guide',
         slug: 'fortnite-radar-hack-guide',
         image: '/images/blog/fortnite-radar-hack-guide.png',
         desc: 'Mini-radar, FOV awareness and safe distance caps for Battle Royale and Zero Build.',
@@ -394,7 +394,7 @@ export const en: Translations = {
       },
       {
         tag: 'Guides',
-        title: 'Skin changer and Unlock All for Fortnite',
+        title: 'Fortnite Skin Changer Cheat / Unlock All Guide',
         slug: 'fortnite-skin-changer-guide',
         image: '/images/blog/fortnite-skin-changer-guide.png',
         desc: 'Preview skins, wraps and exclusive sets locally with our Unlock All Skin Changer module.',
@@ -412,7 +412,7 @@ export const en: Translations = {
       },
       {
         tag: 'Guides',
-        title: 'HWID spoofer vs new account after a EAC ban',
+        title: 'Fortnite HWID Spoofer vs New Account After EAC Ban',
         slug: 'fortnite-hwid-spoofer-after-ban',
         image: '/images/blog/fortnite-hwid-spoofer-after-ban.png',
         desc: 'When to spoof hardware, when to start fresh, and how fortnite-cheats.com/products/fortnite-cheats fits each path.',
@@ -430,7 +430,7 @@ export const en: Translations = {
       },
       {
         tag: 'Setup',
-        title: 'Weapon aimbot guide: AR, SMG and shotgun',
+        title: 'Fortnite Aimbot Cheat Guide: AR, SMG and Shotgun',
         slug: 'fortnite-aimbot-combat-guide',
         image: '/images/blog/fortnite-aimbot-combat-guide.png',
         desc: 'Per-weapon aimbot profiles for Pro tier—AR spray, SMG tracking and shotgun push settings for Ranked.',
@@ -439,7 +439,7 @@ export const en: Translations = {
       },
       {
         tag: 'Troubleshooting',
-        title: 'Easy Anti-Cheat was unable to verify Fortnite',
+        title: 'EAC Unable to Verify Fortnite — Cheat and Appeal Fixes',
         slug: 'eac-bypass-fortnite-guide',
         image: '/images/blog/eac-bypass-fortnite-guide.png',
         desc: 'Fix verification errors, file integrity checks and when to use UGC appeal workflows after EAC issues.',
@@ -457,7 +457,7 @@ export const en: Translations = {
       },
       {
         tag: 'Setup',
-        title: 'Stream-proof overlay setup for Fortnite',
+        title: 'Stream-Proof Fortnite Cheat Overlay Setup',
         slug: 'fortnite-stream-proof-setup',
         image: '/images/blog/fortnite-stream-proof-setup.png',
         desc: 'Hide ESP wallhack and script overlays from OBS, Game Bar and capture cards—test workflow for content creators.',
@@ -467,9 +467,9 @@ export const en: Translations = {
     ],
   },
   toolkit: {
-    eyebrow: 'Software',
-    title: 'Organized, easy to configure',
-    subtitle: 'Every module is grouped for quick tuning mid-match without tabbing through chaos.',
+    eyebrow: 'Cheat menu',
+    title: 'Fortnite cheat menu, organized',
+    subtitle: 'Every cheat module is grouped so you can tune aimbot and ESP mid-match without digging through chaos.',
     items: [
       { num: '01', label: 'Aimbot', title: 'Tracking that adapts per weapon', desc: 'Smoothness, FOV, Sticky Aim and Bone Priority in one aimbot tab.' },
       { num: '02', label: 'ESP', title: 'Wallhack that stays readable', desc: 'Boxes, skeletons, distance, health and team color filters.' },
@@ -483,9 +483,9 @@ export const en: Translations = {
     eyebrow: 'How it works',
     badge: '4 steps',
     titleBefore: 'From buy to',
-    titleHighlight: 'saved config.',
-    subtitle: 'Buy, download the loader, set modules, save your Fortnite config for next time.',
-    ctaLabel: 'View products',
+    titleHighlight: 'in-game cheats.',
+    subtitle: 'Buy Fortnite cheats, download the loader, turn on modules, save your config for next match.',
+    ctaLabel: 'Buy cheats',
     ctaHref: productBase,
     ctaSecondary: 'Setup FAQ',
     ctaSecondaryHref: '/faq/',
@@ -568,8 +568,8 @@ export const en: Translations = {
   },
   faq: {
     eyebrow: 'FAQ',
-    title: 'Common questions',
-    subtitle: 'Compatibility, bans, tiers and setup.',
+    title: 'Fortnite cheats FAQ',
+    subtitle: 'Compatibility, bans, cheat tiers and setup — straight answers before you buy.',
     items: [
       {
         num: '01',
@@ -621,9 +621,9 @@ export const en: Translations = {
   },
   legalPages: {
     about: {
-      title: 'About Fortnite Cheats',
+      title: 'About Fortnite Cheats | Buy PC Aimbot & ESP',
       description:
-        'Fortnite Cheats sells Fortnite cheat tiers, utilities and guides at fortnite-cheats.com.',
+        'About Fortnite Cheats — buy PC Fortnite cheats (aimbot, ESP, wallhack), utilities and guides at fortnite-cheats.com.',
       sections: [
         {
           heading: 'Who we are',
@@ -648,9 +648,9 @@ export const en: Translations = {
       ],
     },
     privacy: {
-      title: 'Privacy Policy',
+      title: 'Privacy Policy | Fortnite Cheats Shop',
       description:
-        'How Fortnite Cheats handles analytics, cookies and contact data on fortnite-cheats.com.',
+        'How the Fortnite cheats shop at fortnite-cheats.com handles analytics, cookies and contact data.',
       sections: [
         {
           heading: 'Information we collect',
@@ -679,9 +679,9 @@ export const en: Translations = {
       ],
     },
     terms: {
-      title: 'Terms & Conditions',
+      title: 'Terms for Fortnite Cheats | License & Refunds',
       description:
-        'Purchase, license, refund and use terms for Fortnite Cheats products on fortnite-cheats.com.',
+        'Terms for buying Fortnite cheats on fortnite-cheats.com — license use, delivery, refunds and account risk.',
       sections: [
         {
           heading: 'Agreement',
@@ -739,9 +739,9 @@ export const en: Translations = {
       ],
     },
     support: {
-      title: 'Fortnite Cheats Support',
+      title: 'Fortnite Cheats Support | Loader, HWID & Checkout',
       description:
-        'Get support for loader, HWID, and checkout questions at fortnite-cheats.com.',
+        'Fortnite cheats support for loader setup, HWID spoofing and checkout help at fortnite-cheats.com.',
     },
   },
   ui: {

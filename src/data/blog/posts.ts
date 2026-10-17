@@ -3,7 +3,7 @@ import type { BlogPostFull } from './types';
 export const blogPosts: BlogPostFull[] = [
   {
     tag: "Guides",
-    title: "Fortnite Creative practice guide: aim drills before ranked",
+    title: "Fortnite Cheats Creative Practice: Aim Drills Before Ranked",
     slug: "fortnite-cheat-codes-guide",
     image: "/images/blog/fortnite-cheat-codes-guide.png",
     desc: "Use Creative and bot lobbies to practice aimbot smoothness, ESP ranges and loadouts before Ranked.",
@@ -44,7 +44,7 @@ export const blogPosts: BlogPostFull[] = [
   },
   {
     tag: "Guides",
-    title: "Fortnite Creative tips for aimbot and ESP practice",
+    title: "Fortnite Cheats Creative Tips for Aimbot and ESP",
     slug: "fortnite-console-cheats-tips",
     image: "/images/blog/fortnite-console-cheats-tips.png",
     desc: "Creative and bot-lobby workflows to tune aimbot, ESP wallhack and loot ESP before Ranked.",
@@ -327,7 +327,7 @@ export const blogPosts: BlogPostFull[] = [
   },
   {
     tag: "Setup",
-    title: "Fortnite aimbot for ranked play",
+    title: "Buy Fortnite Aimbot Cheats for Ranked",
     slug: "fortnite-aimbot-ranked-guide",
     image: "/images/blog/fortnite-aimbot-ranked-guide.png",
     desc: "Aimbot, Prediction and Hotkey macros configs for climbing ranked with Pro tier fortnite cheats.",
@@ -380,7 +380,7 @@ export const blogPosts: BlogPostFull[] = [
   },
   {
     tag: "Setup",
-    title: "ESP wallhack setup for Fortnite ranked",
+    title: "Fortnite ESP Wallhack Cheat Setup for Ranked",
     slug: "fortnite-esp-wallhack-setup",
     image: "/images/blog/fortnite-esp-wallhack-setup.png",
     desc: "Enemy position tracking, chest ESP, smoke alerts and vision detector tuning for Lite and Elite tiers.",
@@ -434,7 +434,7 @@ export const blogPosts: BlogPostFull[] = [
   },
   {
     tag: "Setup",
-    title: "Radar hack guide for Fortnite",
+    title: "Fortnite Radar Hack Cheat Guide",
     slug: "fortnite-radar-hack-guide",
     image: "/images/blog/fortnite-radar-hack-guide.png",
     desc: "Mini-radar, FOV awareness and safe distance caps for Battle Royale and Zero Build.",
@@ -489,7 +489,7 @@ export const blogPosts: BlogPostFull[] = [
   },
   {
     tag: "Guides",
-    title: "Skin changer and Unlock All for Fortnite",
+    title: "Fortnite Skin Changer Cheat / Unlock All Guide",
     slug: "fortnite-skin-changer-guide",
     image: "/images/blog/fortnite-skin-changer-guide.png",
     desc: "Preview skins, wraps and exclusive sets locally with our Unlock All Skin Changer module.",
@@ -598,7 +598,7 @@ export const blogPosts: BlogPostFull[] = [
   },
   {
     tag: "Guides",
-    title: "HWID spoofer vs new account after a EAC ban",
+    title: "Fortnite HWID Spoofer vs New Account After EAC Ban",
     slug: "fortnite-hwid-spoofer-after-ban",
     image: "/images/blog/fortnite-hwid-spoofer-after-ban.png",
     desc: "When to spoof hardware, when to start fresh, and how fortnite-cheats.com/products/fortnite-cheats fits each path.",
@@ -707,7 +707,7 @@ export const blogPosts: BlogPostFull[] = [
   },
   {
     tag: "Setup",
-    title: "Weapon aimbot guide: AR, SMG and shotgun",
+    title: "Fortnite Aimbot Cheat Guide: AR, SMG and Shotgun",
     slug: "fortnite-aimbot-combat-guide",
     image: "/images/blog/fortnite-aimbot-combat-guide.png",
     desc: "Per-weapon aimbot profiles for Pro tier—AR spray, SMG tracking and shotgun push settings for Ranked.",
@@ -738,7 +738,7 @@ export const blogPosts: BlogPostFull[] = [
   },
   {
     tag: "Troubleshooting",
-    title: "Easy Anti-Cheat was unable to verify Fortnite",
+    title: "EAC Unable to Verify Fortnite — Cheat and Appeal Fixes",
     slug: "eac-bypass-fortnite-guide",
     image: "/images/blog/eac-bypass-fortnite-guide.png",
     desc: "Fix verification errors, file integrity checks and when to use Account Recovery after EAC issues.",
@@ -847,7 +847,7 @@ export const blogPosts: BlogPostFull[] = [
   },
   {
     tag: "Setup",
-    title: "Stream-proof overlay setup for Fortnite",
+    title: "Stream-Proof Fortnite Cheat Overlay Setup",
     slug: "fortnite-stream-proof-setup",
     image: "/images/blog/fortnite-stream-proof-setup.png",
     desc: "Hide ESP wallhack and script overlays from OBS, Game Bar and capture cards—test workflow for content creators.",

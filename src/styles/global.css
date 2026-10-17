@@ -117,27 +117,16 @@ html::-webkit-scrollbar,
   padding-bottom: 4.5rem;
 }
 
-#hero .hero-bg-image {
-  transform: scale(1.04);
-  filter: brightness(0.82) saturate(0.55) contrast(0.92);
-}
-
 #hero .hero-bg-dim {
   background:
-    linear-gradient(180deg, rgba(6, 8, 12, 0.42) 0%, rgba(6, 8, 12, 0.28) 45%, rgba(6, 8, 12, 0.68) 100%),
-    linear-gradient(90deg, rgba(6, 8, 12, 0.45) 0%, rgba(6, 8, 12, 0.12) 52%, rgba(6, 8, 12, 0.4) 100%);
-}
-
-/* Light mode: wash hero to a pale surface so near-black copy stays readable */
-html:not(.dark) #hero .hero-bg-image {
-  filter: brightness(1.2) saturate(0.4) contrast(0.95);
-  opacity: 0.38;
+    radial-gradient(ellipse 80% 55% at 50% 0%, rgba(45, 110, 226, 0.18), transparent 65%),
+    linear-gradient(180deg, rgba(14, 18, 24, 0.4) 0%, transparent 55%);
 }
 
 html:not(.dark) #hero .hero-bg-dim {
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.78) 0%, rgba(255, 255, 255, 0.62) 42%, rgba(255, 255, 255, 0.96) 100%),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.4) 52%, rgba(255, 255, 255, 0.65) 100%);
+    radial-gradient(ellipse 80% 55% at 50% 0%, rgba(45, 110, 226, 0.1), transparent 65%),
+    linear-gradient(180deg, rgba(245, 247, 250, 0.4) 0%, transparent 55%);
 }
 
 html:not(.dark) body {
@@ -214,7 +203,7 @@ html:not(.dark) #why-us .why-compare-other-card :hover .icon-app {
   color: var(--muted-foreground);
 }
 
-/* Dark mode — icons stay white (including primary modifier, hovers, utilities) */
+/* Dark mode — icons stay white by default; allow explicit blue accents */
 html.dark .icon-app,
 html.dark .icon-app.icon-app--primary,
 html.dark .icon-app:hover,
@@ -244,6 +233,13 @@ html.dark #why-us .why-compare-other-card .icon-app,
 html.dark #why-us .why-compare-other-card:hover .icon-app,
 html.dark #why-us .why-compare-other-card :hover .icon-app {
   color: #ffffff;
+}
+
+html.dark .text-primary.icon-app,
+html.dark .text-primary .icon-app,
+html.dark [class*='text-primary'] > .icon-app,
+html.dark .icon-app.text-primary {
+  color: #2d6ee2 !important;
 }
 
 :is(a, button)[data-variant='primary']:hover .icon-app,
@@ -716,12 +712,12 @@ html:not(.dark) .deployment-step-title {
 }
 
 html:not(.dark) .deployment-cta-secondary {
-  background: #e8e6e1;
+  background: #e8ecf4;
   color: #1a1a1a;
 }
 
 html:not(.dark) .deployment-cta-secondary:hover {
-  background: color-mix(in oklch, #e8e6e1 88%, #000000);
+  background: color-mix(in oklch, #e8ecf4 88%, #000000);
 }
 
 #why-us .why-compare-us-card .why-compare-card-head [data-slot='card-title'],
@@ -777,10 +773,10 @@ html:not(.dark) .deployment-cta-secondary:hover {
 .why-compare-us-card {
   background: linear-gradient(
     180deg,
-    color-mix(in oklch, var(--primary) 26%, var(--card)) 0%,
-    color-mix(in oklch, var(--primary) 14%, var(--card)) 28%,
-    color-mix(in oklch, var(--primary) 5%, var(--card)) 55%,
-    var(--card) 100%
+    color-mix(in srgb, #2d6ee2 22%, #12161f) 0%,
+    color-mix(in srgb, #2d6ee2 12%, #12161f) 28%,
+    color-mix(in srgb, #2d6ee2 5%, #12161f) 55%,
+    #12161f 100%
   );
 }
 
@@ -803,13 +799,32 @@ html:not(.dark) .deployment-cta-secondary:hover {
 
 /* Matches Starwind CardFooter (`bg-muted/50` + border) for card title bands */
 .card-title-band {
-  background: color-mix(in oklch, var(--muted) 50%, transparent);
+  background: color-mix(in srgb, #161a24 70%, transparent);
   border-bottom: 1px solid var(--border);
 }
 
 .card-footer-band {
-  background: color-mix(in oklch, var(--muted) 50%, transparent);
+  background: color-mix(in srgb, #161a24 70%, transparent);
   border-top: 1px solid var(--border);
+}
+
+html:not(.dark) .card-title-band,
+html:not(.dark) .card-footer-band {
+  background: color-mix(in srgb, var(--muted) 50%, transparent);
+}
+
+/* Force cool navy surfaces — kill any warm/purple card casts */
+html.dark,
+html.dark body {
+  background-color: #0b1018;
+}
+
+html.dark .bg-card,
+html.dark [data-slot='card'],
+html.dark [data-sw-card],
+html.dark .features-bento > article {
+  background-color: #121a28 !important;
+  background-image: none !important;
 }
 
 
